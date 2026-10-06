@@ -34,8 +34,18 @@
 
   <title>Pixel Drag Racer</title>
   <link rel="manifest" href="manifest.json">
+  <style>
+    /* Game controls are held down: stop iOS selection, callouts and
+       rubber-band scrolling from stealing the touch. */
+    html, body {
+      background: #1A1C2C; margin: 0; height: 100%; overflow: hidden;
+      touch-action: none; overscroll-behavior: none;
+      -webkit-user-select: none; user-select: none;
+      -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent;
+    }
+  </style>
 </head>
-<body style="background:#1A1C2C;margin:0">
+<body>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
